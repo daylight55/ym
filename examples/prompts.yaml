@@ -1,0 +1,28 @@
+prompts:
+  - name: "projectName"
+    message: "Enter the project name:"
+    type: "input"
+    defaultValue: "MyNewProject"
+  - name: "projectType"
+    message: "Select the project type:"
+    type: "select"
+    options:
+      - "Web Application"
+      - "Mobile Application"
+      - "CLI Tool"
+      - "Library"
+  - name: "features"
+    message: "Select features to include (use space to select, enter to confirm):"
+    type: "multiselect"
+    options:
+      - "Authentication"
+      - "Database Integration"
+      - "API Endpoints"
+      - "User Interface"
+  - name: "selectedModule"
+    message: "Select a module from the './examples/example_modules' directory:"
+    type: "select" # Can also be multiselect
+    dynamic:
+      source: "directory"
+      path: "./examples/example_modules" # Path relative to where the tool is run
+                                    # This should point to the example_modules dir.
