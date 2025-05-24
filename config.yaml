@@ -1,0 +1,10 @@
+environment: "development"
+clusterName: "dev-cluster"
+appName: "my-app"
+appVersion: "1.0.0"
+helmfileTemplate: "helmfile.yaml.tmpl"
+valuesTemplate: "values.yaml.tmpl"
+variables:
+  imageTag: "latest"
+  replicaCount: 2
+  servicePort: 8080
