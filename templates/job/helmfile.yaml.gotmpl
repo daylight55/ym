@@ -1,0 +1,14 @@
+# helmfile.yaml for {{ .AppName }} (Job Type)
+# Environment: {{ .Environment }}
+# Cluster: {{ .ClusterName }}
+
+repositories:
+  - name: stable
+    url: https://charts.helm.sh/stable
+
+releases:
+  - name: {{ .AppName }}
+    chart: stable/nginx-ingress # Example chart
+    version: {{ .AppVersion }}
+    values:
+      - values.yaml

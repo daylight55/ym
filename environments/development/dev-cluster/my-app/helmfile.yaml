@@ -1,0 +1,14 @@
+# helmfile.yaml for my-app
+# Environment: development
+# Cluster: dev-cluster
+
+repositories:
+  - name: stable
+    url: https://charts.helm.sh/stable
+
+releases:
+  - name: my-app
+    chart: stable/nginx-ingress # Example chart
+    version: 1.0.0
+    values:
+      - values.yaml
